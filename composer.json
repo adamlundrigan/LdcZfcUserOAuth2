@@ -1,0 +1,15 @@
+{
+    "name": "adamlundrigan/ldc-zfc-user-apigility",
+    "description": "ZfcUser <--> Apigility bridge",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Adam Lundrigan",
+            "email": "adam@lundrigan.ca"
+        }
+    ],
+    "require": {
+        "zf-commons/zfc-user": "1.*",
+        "zfcampus/zf-oauth2": "1.*"
+    }
+}
