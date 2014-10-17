@@ -31,3 +31,11 @@ __WARNING__: This code is not yet tested, documented or been used in a live envi
        ),
    );
    ```
+
+## TODO
+
+ - [x] Use ZfcUser's authentication mechanism in OAuth2 server
+ - [ ] Apigility RPC resource for account registration
+ - [ ] Apigility RPC resource for change email / change password 
+ - [ ] Some tests might be a good idea
+ - [ ] Some documentation and an example might also be good ideas
