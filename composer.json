@@ -11,5 +11,10 @@
     "require": {
         "zf-commons/zfc-user": "1.*",
         "zfcampus/zf-oauth2": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LdcZfcUserApigility\\": "src/"
+        }
     }
 }
