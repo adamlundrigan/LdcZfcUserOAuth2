@@ -32,6 +32,12 @@ __WARNING__: This code is not yet tested, documented or been used in a live envi
    );
    ```
 
+5. Override the authentication adapter used by ZfcUser.  Locate the `auth_adapters` key in your `zfcuser.global.php` config file and replace it with this:
+
+   ```
+   'auth_adapters' => array( 100 => 'ldc-zfc-user-oauth2-authentication-adapter-db' ),
+   ```
+
 ## TODO
 
  - [x] Use ZfcUser's authentication mechanism in OAuth2 server
