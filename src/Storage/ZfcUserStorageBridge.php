@@ -1,5 +1,5 @@
 <?php
-namespace LdcZfcUserApigility\Storage;
+namespace LdcZfcUserOAuth2\Storage;
 
 use OAuth2\Storage\UserCredentialsInterface;
 use ZfcUser\Mapper\UserInterface as UserMapperInterface;

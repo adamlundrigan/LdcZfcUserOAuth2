@@ -1,5 +1,5 @@
 <?php
-namespace LdcZfcUserApigility\Storage;
+namespace LdcZfcUserOAuth2\Storage;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
@@ -34,7 +34,7 @@ class ZfcUserPdoFactory implements FactoryInterface
                 'options'  => $options,
             ), 
             $oauth2ServerConfig,
-            $serviceLocator->get('ldc-zfc-user-apigility-storage-bridge')
+            $serviceLocator->get('ldc-zfc-user-oauth2-storage-bridge')
         );
         
         return $obj;

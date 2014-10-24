@@ -1,5 +1,5 @@
 <?php
-namespace LdcZfcUserApigility\Authentication\Adapter;
+namespace LdcZfcUserOAuth2\Authentication\Adapter;
 
 use ZfcUser\Authentication\Adapter\Db as BaseAdapter;
 use Zend\Authentication\Result as AuthenticationResult;

@@ -1,5 +1,5 @@
 <?php
-namespace LdcZfcUserApigility;
+namespace LdcZfcUserOAuth2;
 
 use Zend\Mvc\MvcEvent;
 use ZF\MvcAuth\MvcAuthEvent;

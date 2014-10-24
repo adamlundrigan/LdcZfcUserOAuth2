@@ -1,6 +1,7 @@
 {
-    "name": "adamlundrigan/ldc-zfc-user-apigility",
-    "description": "ZfcUser <--> Apigility bridge",
+    "name": "adamlundrigan/ldc-zfc-user-oauth2",
+    "description": "OAuth2 server integration for ZfcUser",
+    "keywords": [ "zfcuser", "apigility", "zf-oauth2" ],
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -10,11 +11,15 @@
     ],
     "require": {
         "zf-commons/zfc-user": "1.*",
+        "adamlundrigan/ldc-zfc-user-api": "0.*",
         "zfcampus/zf-oauth2": "1.*"
+    },
+    "replace": {
+        "adamlundrigan/ldc-zfc-user-apigility": "*"
     },
     "autoload": {
         "psr-4": {
-            "LdcZfcUserApigility\\": "src/"
+            "LdcZfcUserOAuth2\\": "src/"
         },
         "files": ["Module.php"]
     }
