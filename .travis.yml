@@ -1,0 +1,32 @@
+language: php
+
+php:
+  - "5.4"
+  - "5.5"
+  - "5.6"
+  - "hhvm"
+
+env:
+  - ZF2_VER="DEFAULT"
+  - ZF2_VER="dev-master@dev"
+  - ZF2_VER="2.3.*@stable"
+  - ZF2_VER="2.2.*@stable"
+
+install:
+  - if [ "$ZF2_VER" != "DEFAULT" ]; then sed "s/{{ZF2_VERSION}}/$ZF2_VER/g" .travisci/composer.json.tmpl > composer.json; fi;
+  - composer install --dev
+  - composer show -i
+  - wget https://scrutinizer-ci.com/ocular.phar
+
+before_script:
+
+script:
+  - ./vendor/bin/php-cs-fixer fix -v --dry-run src;
+  - ./vendor/bin/php-cs-fixer fix -v --dry-run tests;
+  - ./vendor/bin/phpunit
+
+after_script:
+  - php ocular.phar code-coverage:upload --format=php-clover tests/log/clover.xml
+
+matrix:
+  fast_finish: true
