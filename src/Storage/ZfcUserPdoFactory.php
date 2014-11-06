@@ -6,7 +6,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 
 class ZfcUserPdoFactory implements FactoryInterface
 {
-    
+
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $config = $serviceLocator->get('Config');
@@ -32,13 +32,12 @@ class ZfcUserPdoFactory implements FactoryInterface
                 'username' => $username,
                 'password' => $password,
                 'options'  => $options,
-            ), 
+            ),
             $oauth2ServerConfig,
             $serviceLocator->get('ldc-zfc-user-oauth2-storage-bridge')
         );
-        
+
         return $obj;
     }
-
 
 }

@@ -25,6 +25,7 @@ class Db extends BaseAdapter
             $e->setIdentity($storage['identity'])
               ->setCode(AuthenticationResult::SUCCESS)
               ->setMessages(array('Authentication successful.'));
+
             return;
         }
 
@@ -51,6 +52,7 @@ class Db extends BaseAdapter
             $e->setCode(AuthenticationResult::FAILURE_IDENTITY_NOT_FOUND)
               ->setMessages(array('A record with the supplied identity could not be found.'));
             $this->setSatisfied(false);
+
             return false;
         }
 
@@ -60,6 +62,7 @@ class Db extends BaseAdapter
                 $e->setCode(AuthenticationResult::FAILURE_UNCATEGORIZED)
                   ->setMessages(array('A record with the supplied identity is not active.'));
                 $this->setSatisfied(false);
+
                 return false;
             }
         }
@@ -71,6 +74,7 @@ class Db extends BaseAdapter
             $e->setCode(AuthenticationResult::FAILURE_CREDENTIAL_INVALID)
               ->setMessages(array('Supplied credential is invalid.'));
             $this->setSatisfied(false);
+
             return false;
         }
 
