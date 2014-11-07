@@ -3,6 +3,7 @@ namespace LdcZfcUserOAuth2\Storage;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
+use ZF\OAuth2\Adapter\Exception;
 
 class ZfcUserPdoFactory implements FactoryInterface
 {
