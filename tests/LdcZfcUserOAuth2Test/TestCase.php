@@ -48,7 +48,6 @@ class TestCase extends \PHPUnit_Framework_TestCase
         );
 
         $serviceManager->setService('ApplicationConfig', $configuration);
-        $serviceManager->setAlias('Config', 'ApplicationConfig');
         $serviceManager->setFactory('ServiceListener', 'Zend\Mvc\Service\ServiceListenerFactory');
 
         return $serviceManager;
