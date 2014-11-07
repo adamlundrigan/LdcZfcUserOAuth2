@@ -6,14 +6,7 @@ php:
   - "5.6"
   - "hhvm"
 
-env:
-  - ZF2_VER="DEFAULT"
-  - ZF2_VER="dev-master@dev"
-  - ZF2_VER="2.3.*@stable"
-  - ZF2_VER="2.2.*@stable"
-
 install:
-  - if [ "$ZF2_VER" != "DEFAULT" ]; then sed "s/{{ZF2_VERSION}}/$ZF2_VER/g" .travisci/composer.json.tmpl > composer.json; fi;
   - composer install --dev
   - composer show -i
   - wget https://scrutinizer-ci.com/ocular.phar
