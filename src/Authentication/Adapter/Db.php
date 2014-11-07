@@ -11,7 +11,9 @@ class Db extends BaseAdapter
 
     /**
      * Called when user id logged out
-     * @param  AuthEvent $e event passed
+     * @TODO this can be removed on release of ZfcUser 1.2.2
+     *
+     * @param AuthEvent $e event passed
      */
     public function logout(AuthEvent $e)
     {
