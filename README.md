@@ -4,7 +4,11 @@
 
 An extension for [`zf-oauth2`](https://github.com/zfcampus/zf-oauth2) allowing use of ZfcUser as authentication source
 
-__WARNING__: This code is not yet tested, documented or been used in a live environment.  Approach with extreme caution.
+----
+
+[![Latest Stable Version](https://poser.pugx.org/adamlundrigan/ldc-zfc-user-oauth2/v/stable.svg)](https://packagist.org/packages/adamlundrigan/ldc-zfc-user-oauth2) [![License](https://poser.pugx.org/adamlundrigan/ldc-zfc-user-oauth2/license.svg)](https://packagist.org/packages/adamlundrigan/ldc-zfc-user-oauth2) [![Build Status](https://travis-ci.org/adamlundrigan/LdcZfcUserOAuth2.svg?branch=master)](https://travis-ci.org/adamlundrigan/LdcZfcUserOAuth2) [![Code Coverage](https://scrutinizer-ci.com/g/adamlundrigan/LdcZfcUserOAuth2/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/adamlundrigan/LdcZfcUserOAuth2/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/adamlundrigan/LdcZfcUserOAuth2/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/adamlundrigan/LdcZfcUserOAuth2/?branch=master)
+
+----
 
 ## How?
 
@@ -32,7 +36,7 @@ __WARNING__: This code is not yet tested, documented or been used in a live envi
    );
    ```
 
-5. Override the authentication adapter used by ZfcUser.  Locate the `auth_adapters` key in your `zfcuser.global.php` config file and replace it with this:
+5. Override the authentication adapter used by ZfcUser.  Locate the `auth_adapters` key in your `zfc-user.global.php` config file and replace it with this:
 
    ```
    'auth_adapters' => array( 100 => 'ldc-zfc-user-oauth2-authentication-adapter-db' ),
