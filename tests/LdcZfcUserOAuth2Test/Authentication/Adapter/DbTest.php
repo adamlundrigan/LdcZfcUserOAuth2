@@ -6,16 +6,16 @@ use LdcZfcUserOAuth2\Authentication\Adapter\Db;
 
 class DbTest extends \PHPUnit_Framework_TestCase
 {
-    
+
     public function testGetStorageWillInstantiateNonPersistentAdapterByDefault()
     {
         $db = new Db();
         $this->assertInstanceOf('\Zend\Authentication\Storage\NonPersistent', $db->getStorage());
     }
-    
+
     // Everything below here is taken from ZfcUserTest\Authentication\Adapter
-    
-    
+
+
     /**
      * The object to be tested.
      *
@@ -75,7 +75,7 @@ class DbTest extends \PHPUnit_Framework_TestCase
         $user = $this->getMock('ZfcUser\Entity\User');
         $this->user = $user;
 
-        $this->db = new Db;
+        $this->db = new Db();
         $this->db->setStorage($this->storage);
     }
 
