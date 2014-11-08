@@ -105,6 +105,6 @@ class Db extends BaseAdapter
             $this->setStorage(new \Zend\Authentication\Storage\NonPersistent());
         }
 
-        return $this->storage;
+        return parent::getStorage();
     }
 }
