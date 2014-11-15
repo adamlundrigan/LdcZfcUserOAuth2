@@ -8,7 +8,6 @@ use ZfcUser\Authentication\Adapter\AdapterChainEvent as AuthEvent;
 
 class Db extends BaseAdapter
 {
-
     /**
      * Called when user id logged out
      * @TODO this can be removed on release of ZfcUser 1.2.2

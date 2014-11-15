@@ -25,5 +25,4 @@ class ZfcUserPdo extends OAuth2Pdo
     {
         return $this->bridge->getUserDetails($username);
     }
-
 }

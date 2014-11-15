@@ -7,7 +7,6 @@ use ZF\OAuth2\Adapter\Exception;
 
 class ZfcUserPdoFactory implements FactoryInterface
 {
-
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $config = $serviceLocator->get('Config');
@@ -40,5 +39,4 @@ class ZfcUserPdoFactory implements FactoryInterface
 
         return $obj;
     }
-
 }

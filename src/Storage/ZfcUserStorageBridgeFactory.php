@@ -6,7 +6,6 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 
 class ZfcUserStorageBridgeFactory implements FactoryInterface
 {
-
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $obj = new ZfcUserStorageBridge(
@@ -18,5 +17,4 @@ class ZfcUserStorageBridgeFactory implements FactoryInterface
 
         return $obj;
     }
-
 }

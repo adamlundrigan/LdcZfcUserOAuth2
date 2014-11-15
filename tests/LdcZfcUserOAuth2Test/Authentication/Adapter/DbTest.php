@@ -6,7 +6,6 @@ use LdcZfcUserOAuth2\Authentication\Adapter\Db;
 
 class DbTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testGetStorageWillInstantiateNonPersistentAdapterByDefault()
     {
         $db = new Db();
@@ -87,7 +86,7 @@ class DbTest extends \PHPUnit_Framework_TestCase
         $this->storage->expects($this->once())
                       ->method('clear');
 
-         $this->db->logout($this->authEvent);
+        $this->db->logout($this->authEvent);
     }
 
     /**

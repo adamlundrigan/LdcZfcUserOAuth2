@@ -10,7 +10,6 @@ use ZfcUser\Options\AuthenticationOptionsInterface;
 
 class ZfcUserStorageBridge implements UserCredentialsInterface
 {
-
     /**
      * ZfcUser mapper
      *
@@ -66,7 +65,7 @@ class ZfcUserStorageBridge implements UserCredentialsInterface
         }
 
         $authResult = $this->auth->authenticate($this->authAdapter);
-        if ( ! $authResult->isValid() ) {
+        if (! $authResult->isValid()) {
             $this->authAdapter->resetAdapters();
 
             return false;
@@ -109,5 +108,4 @@ class ZfcUserStorageBridge implements UserCredentialsInterface
             'state'         => $user->getState(),
         );
     }
-
 }

@@ -4,7 +4,7 @@ use LdcZfcUserOAuth2Test\TestCase;
 
 ini_set('error_reporting', E_ALL);
 
-$files = array(__DIR__ . '/../vendor/autoload.php', __DIR__ . '/../../../vendor/autoload.php', __DIR__ . '/../../../autoload.php');
+$files = array(__DIR__.'/../vendor/autoload.php', __DIR__.'/../../../vendor/autoload.php', __DIR__.'/../../../autoload.php');
 foreach ($files as $file) {
     if (file_exists($file)) {
         $loader = require $file;
@@ -19,10 +19,10 @@ if (! isset($loader)) {
 /* @var $loader \Composer\Autoload\ClassLoader */
 $loader->add('LdcZfcUserOAuth2Test\\', __DIR__);
 
-if (file_exists(__DIR__ . '/TestConfiguration.php')) {
-    $config = require __DIR__ . '/TestConfiguration.php';
+if (file_exists(__DIR__.'/TestConfiguration.php')) {
+    $config = require __DIR__.'/TestConfiguration.php';
 } else {
-    $config = require __DIR__ . '/TestConfiguration.php.dist';
+    $config = require __DIR__.'/TestConfiguration.php.dist';
 }
 
 TestCase::setConfiguration($config);
