@@ -15,7 +15,7 @@ An extension for [`zf-oauth2`](https://github.com/zfcampus/zf-oauth2) allowing u
 1. Install module using Composer
 
    ```
-   composer install adamlundrigan/ldc-zfc-user-oauth2:<version>
+   composer require adamlundrigan/ldc-zfc-user-oauth2:<version>
    ```
 
 2. Enable required modules in your `application.config.php` file:
